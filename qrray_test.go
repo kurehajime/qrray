@@ -14,7 +14,7 @@ func TestQrray(t *testing.T) {
 	input := `hoge
 huga
 piyo`
-	Creates(input, "qrray_test_", 256, dir)
+	Creates(input, prefix, 256, dir)
 
 	for i := 0; i < 3; i++ {
 		path := filepath.Join(dir, prefix+fmt.Sprint(i)+".png")

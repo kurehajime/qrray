@@ -1,0 +1,46 @@
+<html>
+<style>
+    #columnbox {
+        display: table;
+        direction: ltr;
+    }
+
+    .qr {
+        display: inline-block;
+        direction: ltr;
+    }
+
+    figcaption {
+        text-align: center;
+        width: 80px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+</style>
+
+<body>
+    <div id="columnbox">
+    </div>
+    <script defer>
+        const prefix = 'qrray_test_';
+        const path = './';
+        const count = 45;
+        const columnbox = document.getElementById('columnbox');
+        const template = document.getElementById('template');
+        for (let i = 0; i < count; i++) {
+            columnbox.insertAdjacentHTML('beforeend', `
+            <div class="qr">
+                <figure>
+                    <img src="${path + prefix + i + ".png"}">
+                    <figcaption>${prefix + i + ".png"}</figcaption>
+                </figure>
+            </div>
+            `);
+        }
+    </script>
+</body>
+
+</html>
