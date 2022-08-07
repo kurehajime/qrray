@@ -2,6 +2,10 @@
 Create HTML with a QR codes from multiple lines of text.
 ![qrray](https://user-images.githubusercontent.com/4569916/183288217-4bd5590e-c4d5-48ad-aacd-ac99988d5760.png) 
 
+## install 
+
+[Download here](https://github.com/kurehajime/qrray/releases)
+
 ## Usage
 
 1. Prepare multiple lines of text.
