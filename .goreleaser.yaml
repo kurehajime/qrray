@@ -1,0 +1,10 @@
+release:
+  github:
+    owner: kurehajime
+    name: qrray
+
+  header: |
+    ## qrray ({{ .Date }})
+
+    Welcome to this new release!
+
