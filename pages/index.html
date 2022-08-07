@@ -1,5 +1,9 @@
 <html>
 <style>
+    :root {
+        --qr-size: 80px;
+    }
+
     #columnbox {
         display: table;
         direction: ltr;
@@ -12,12 +16,18 @@
 
     figcaption {
         text-align: center;
-        width: 80px;
+        width: var(--qr-size);
+        font-size: xx-small;
+        overflow-wrap: break-word;
+    }
+
+    figure {
+        margin: 5px;
     }
 
     img {
-        width: 80px;
-        height: 80px;
+        width: var(--qr-size);
+        height: var(--qr-size);
     }
 </style>
 
