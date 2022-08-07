@@ -1,7 +1,7 @@
 <html>
 <style>
     :root {
-        --qr-size: 80px;
+        --qr-size: {{.Size}}px;
     }
 
     #columnbox {
@@ -35,20 +35,20 @@
     <div id="columnbox">
     </div>
     <script defer>
-        const prefix = 'qrray_test_';
+        const prefix = '{{.Prefix }}';
         const path = './';
-        const count = 45;
+        const count = {{.Count }};
         const columnbox = document.getElementById('columnbox');
         const template = document.getElementById('template');
         for (let i = 0; i < count; i++) {
             columnbox.insertAdjacentHTML('beforeend', `
-            <div class="qr">
-                <figure>
-                    <img src="${path + prefix + i + ".png"}">
-                    <figcaption>${prefix + i + ".png"}</figcaption>
-                </figure>
-            </div>
-            `);
+        <div class="qr">
+        <figure>
+            <img src="${path + prefix + i + ".png"}">
+            <figcaption>${prefix + i + ".png"}</figcaption>
+        </figure>
+        </div>
+        `);
         }
     </script>
 </body>
