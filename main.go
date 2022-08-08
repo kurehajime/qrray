@@ -34,8 +34,14 @@ func main() {
 	} else {
 		text= readFileByArg(flag.Arg(0))
 	}
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "Usage of qrray \n")
+		fmt.Fprintf(os.Stderr, "  qrray [options] text_file_path \n")
+		fmt.Fprintf(os.Stderr, "Options: \n")
+		flag.PrintDefaults()
+	}
 	if(text == ""){
-		fmt.Fprintln(os.Stderr, "Specify a text file as an argument.")
+		flag.Usage()
 		return
 	}
 
